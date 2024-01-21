@@ -1,0 +1,149 @@
+<html>
+  <head>
+    <title>Edit Course</title>
+  </head>
+  <body>
+    <select>
+      <option value="Speed Grader">Speed Grader</option>
+    </select>
+    <h2>Assignment Name</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <input
+              type="text"
+              placeholder=""
+              title="Assignment Name"
+              value="Example Assignment"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <textarea
+              cols="20"
+              rows="3"
+              placeholder="Assignment Description"
+              title="tooltip"
+            >
+This is the assignment description.</textarea
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Points</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="number"
+              placeholder=""
+              title="Assignment Name"
+              value="100"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Assignment Group</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <select>
+              <option value="ASSIGNMENTS" selected>ASSIGNMENTS</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Display Grade as</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <select>
+              <option value="Percentage" selected>Percentage</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Submission Type</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <select>
+              <option value="Online" selected>Oneline</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Online Entry Options</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" value="Text Entry" id="checkbox-textentry" />
+            <label for="checkbox-textentry">Text Entry</label><br />
+            <input type="checkbox" value="Website URL" id="checkbox-weburl" />
+            <label for="checkbox-weburl">Website URL</label><br />
+
+            <input
+              type="checkbox"
+              value="Media Recordings"
+              id="checkbox-mediarecordings"
+            />
+            <label for="checkbox-mediarecordings">Media Recordings</label><br />
+            <input
+              type="checkbox"
+              value="Student Annotation"
+              id="checkbox-studentannotation"
+            />
+            <label for="checkbox-studentannotation">Student Annotation</label
+            ><br />
+            <input type="checkbox" value="File Uploads" id="checkbox-fileuploads" />
+            <label for="checkbox-fileuploads">File Uploads</label><br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Assign</p>
+            <label>Assign to</label><br />
+            <input
+              type="text"
+              placeholder=""
+              title="Assign to"
+              value="Everyone"
+            /><br />
+            <label>Due</label><br />
+            <input type="date" id="text-fields-due" value="2021-01-01" /><br />
+            <label>Available from</label><br />
+            <input
+              type="date"
+              id="text-fields-avail"
+              value="2021-01-01"
+            /><br />
+            <label>Until</label><br />
+            <input
+              type="date"
+              id="text-fields-until"
+              value="2021-01-01"
+            /><br />
+            <a href="/Kanbas/Courses/Assignments/screen.html">
+              <button>Cancel</button>
+            </a>
+            <a href="/Kanbas/Courses/Assignments/screen.html">
+              <button>Save</button>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
