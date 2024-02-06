@@ -1,0 +1,7 @@
+.dashboard {
+    display: flex;
+}
+
+.dashboard-child {
+    margin-right: 10px;
+}

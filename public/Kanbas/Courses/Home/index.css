@@ -27,3 +27,9 @@
   border-top: 1px solid gray !important;
   border-left: 3px solid green;
 }
+ 
+.btn-custom-primary {
+  background-color: gray;
+  border-color: #000000;
+  color: #000000; 
+}
