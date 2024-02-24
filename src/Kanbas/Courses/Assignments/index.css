@@ -1,0 +1,18 @@
+.assignments-options {
+    display: flex;
+}
+
+.assignment-icon {
+    color: green;
+    margin-right: 1em;
+}
+
+.assignment-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.assignment-button {
+    margin-right: 0.5em;
+}
