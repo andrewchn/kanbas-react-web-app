@@ -1,0 +1,8 @@
+.course-name {
+  color: red;
+  margin-right: 0.5em;
+}
+
+.header-div {
+    display: flex;
+}
