@@ -1,4 +1,3 @@
-import { FaEllipsisV } from "react-icons/fa";
 import ModuleList from "./List";
 import ModuleStatus from "./Status";
 function Modules() {
