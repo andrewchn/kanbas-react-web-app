@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./index.css";
-import { modules } from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
 import { useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
@@ -37,36 +36,41 @@ function ModuleList() {
         >
           Publish All
         </button>
-        <button type="button" className="btn btn-danger module-button">
-          Add Module
-        </button>
         <button type="button" className="btn btn-secondary module-button">
           <FaEllipsisV className="me-2" />
         </button>
-      </div>{" "}
-      <ul className="list-group wd-modules">
-        <li className="list-group-item">
+
+        <div className="">
           <button
+            className="btn btn-danger module-button"
             onClick={() => dispatch(addModule({ ...module, course: courseId }))}
           >
             Add
           </button>
-          <button onClick={() => dispatch(updateModule(module))}>Update</button>
+          <button
+            className="btn btn-danger module-button"
+            onClick={() => dispatch(updateModule(module))}
+          >
+            Update
+          </button>
 
           <input
+            className="form-control"
             value={module.name}
             onChange={(e) =>
               dispatch(setModule({ ...module, name: e.target.value }))
             }
           />
           <textarea
+            className="form-control"
             value={module.description}
             onChange={(e) =>
               dispatch(setModule({ ...module, description: e.target.value }))
             }
           />
-        </li>
-
+        </div>
+      </div>{" "}
+      <ul className="list-group wd-modules">
         {modulesList
           .filter((module) => module.course === courseId)
           .map((module, index) => (
@@ -75,11 +79,22 @@ function ModuleList() {
               className="list-group-item"
               onClick={() => setSelectedModule(module)}
             >
-              <button onClick={() => dispatch(deleteModule(module._id))}>
-                Delete
-              </button>
-              <button onClick={() => dispatch(setModule(module))}>Edit</button>
-
+              <div className="module-modifiers">
+                <button
+                  type="button"
+                  className="module-mod-btn"
+                  onClick={() => dispatch(deleteModule(module._id))}
+                >
+                  Delete
+                </button>
+                <button
+                  type="button"
+                  className="module-mod-btn"
+                  onClick={() => dispatch(setModule(module))}
+                >
+                  Edit
+                </button>
+              </div>
               <div>
                 <FaEllipsisV className="me-2" />
                 {module.name}
