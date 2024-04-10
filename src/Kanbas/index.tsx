@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router";
 import Dashboard from "./Dashboard";
 import KanbasNavigation from "./Navigation";
 import Courses from "./Courses";
+import Account from "./Account";
 //import { courses as cs } from "./Database";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -9,7 +10,7 @@ import { Profiler } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 const API_BASE = process.env.REACT_APP_API_BASE;
-console.log(API_BASE);
+
 function Kanbas() {
   const [courses, setCourses] = useState<any[]>([]);
   const COURSES_API = `${API_BASE}/api/courses`;
@@ -85,7 +86,7 @@ function Kanbas() {
         <div style={{ flexGrow: 1 }}>
           <Routes>
             <Route path="/" element={<Navigate to="Dashboard" />} />
-            <Route path="Account" element={<h1>Account</h1>} />
+            <Route path="/Account/*" element={<Account />} />
             <Route
               path="Dashboard"
               element={
